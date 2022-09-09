@@ -1,0 +1,10 @@
+# NPM
+node_modules/
+
+# DEV
+src/
+tsconfig.json
+
+# GIT
+.git
+.gitignore
