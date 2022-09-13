@@ -26,7 +26,7 @@ export const RatelTable: React.FC<RatelTableProp> = (props: RatelTableProp) => {
           <tr>
             {columns.map((column: RatelTableColumnElement) => (
               <RatelTableDataCell>
-                {column.render ? column.render(data[column.name]) : data[column.name]}
+                {column.render ? column.render(data) : data[column.name]}
               </RatelTableDataCell>
             ))}
           </tr>
