@@ -1,6 +1,6 @@
 {
   "name": "react-hobeoung-ui",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -23,16 +23,19 @@
     "@types/node": "^16.11.56",
     "@types/react": "^18.0.18",
     "@types/react-dom": "^18.0.6",
+    "@types/styled-components": "^5.1.25",
+    "csv": "^6.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "styled-components": "^5.3.5",
     "typescript": "^4.8.2",
-    "@types/styled-components": "^5.1.25",
-    "styled-components": "^5.3.5"
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
+    "autoprefixer": "^10.4.7",
     "eslint": "^7.32.0 || ^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
@@ -42,9 +45,8 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "prettier": "^2.7.1",
-    "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
     "tailwindcss": "^3.1.6"
   },
   "scripts": {
