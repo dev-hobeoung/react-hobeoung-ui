@@ -3,6 +3,7 @@ import React from 'react';
 import { RatelTableProp } from './ratel-table';
 import { RatelTableColumnCell } from './ratel-table-column-cell';
 import { RatelTableColumnElement } from './ratel-table-column-element';
+import { RatelTableDataCell } from './ratel-table-data-cell';
 import { RatelTableDataCellEditable } from './ratel-table-data-cell-editable';
 import { RatelTableDataElement } from './ratel-table-data-element';
 
@@ -29,7 +30,7 @@ export const RatelTableEditable: React.FC<RatelTableEditableProp> = (
           <tr>
             {columns.map((column: RatelTableColumnElement) =>
               column.render ? (
-                column.render(data)
+                <RatelTableDataCell>{column.render(data)}</RatelTableDataCell>
               ) : (
                 <RatelTableDataCellEditable
                   value={data[column.name]}
