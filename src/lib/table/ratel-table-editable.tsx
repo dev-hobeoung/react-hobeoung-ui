@@ -27,16 +27,20 @@ export const RatelTableEditable: React.FC<RatelTableEditableProp> = (
       <tbody>
         {datas.map((data: RatelTableDataElement, index: number) => (
           <tr>
-            {columns.map((column: RatelTableColumnElement) => (
-              <RatelTableDataCellEditable
-                value={data[column.name]}
-                onEdit={(value: string | number | undefined) => {
-                  const editDatas: RatelTableDataElement[] = datas;
-                  editDatas[index][column.name] = value;
-                  onEdit(editDatas);
-                }}
-              />
-            ))}
+            {columns.map((column: RatelTableColumnElement) =>
+              column.render ? (
+                column.render(data)
+              ) : (
+                <RatelTableDataCellEditable
+                  value={data[column.name]}
+                  onEdit={(value: string | number | undefined) => {
+                    const editDatas: RatelTableDataElement[] = datas;
+                    editDatas[index][column.name] = value;
+                    onEdit(editDatas);
+                  }}
+                />
+              )
+            )}
           </tr>
         ))}
       </tbody>
