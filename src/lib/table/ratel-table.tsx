@@ -24,11 +24,11 @@ export const RatelTable: React.FC<RatelTableProp> = (props: RatelTableProp) => {
         </tr>
       </thead>
       <tbody {...bodyProps}>
-        {datas.map((data: RatelTableDataElement) => (
+        {datas.map((data: RatelTableDataElement, index: number) => (
           <tr>
             {columns.map((column: RatelTableColumnElement) => (
               <RatelTableDataCell>
-                {column.render ? column.render(data) : data[column.name]}
+                {column.render ? column.render(data, index) : data[column.name]}
               </RatelTableDataCell>
             ))}
           </tr>

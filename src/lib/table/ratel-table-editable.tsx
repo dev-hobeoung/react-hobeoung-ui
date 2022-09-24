@@ -30,7 +30,7 @@ export const RatelTableEditable: React.FC<RatelTableEditableProp> = (
           <tr>
             {columns.map((column: RatelTableColumnElement) =>
               column.render ? (
-                <RatelTableDataCell>{column.render(data)}</RatelTableDataCell>
+                <RatelTableDataCell>{column.render(data, index)}</RatelTableDataCell>
               ) : (
                 <RatelTableDataCellEditable
                   value={data[column.name]}
