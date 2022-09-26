@@ -14,18 +14,18 @@ export interface RatelTableEditableProp extends RatelTableProp {
 export const RatelTableEditable: React.FC<RatelTableEditableProp> = (
   props: RatelTableEditableProp
 ) => {
-  const { columns, datas, onEdit } = props;
+  const { columns, datas, onEdit, headProps, bodyProps, ...otherProps } = props;
 
   return (
-    <table>
-      <thead>
+    <table {...otherProps}>
+      <thead {...headProps}>
         <tr>
           {columns.map((column: RatelTableColumnElement) => (
             <RatelTableColumnCell>{column.label || column.name}</RatelTableColumnCell>
           ))}
         </tr>
       </thead>
-      <tbody>
+      <tbody {...bodyProps}>
         {datas.map((data: RatelTableDataElement, index: number) => (
           <tr>
             {columns.map((column: RatelTableColumnElement) =>
